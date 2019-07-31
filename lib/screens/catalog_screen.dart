@@ -21,7 +21,7 @@ class CatalogScreen extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        itemCount: 100,
+        itemCount: 50,
         itemBuilder: (context, index) => CatalogItem(index),
       ),
     );

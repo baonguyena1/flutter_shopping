@@ -19,4 +19,9 @@ class CartModel extends ChangeNotifier {
     _itemIds.add(item.id);
     notifyListeners();
   }
+
+  void remove(Item item) {
+    _itemIds.removeWhere((id) => item.id == id);
+    notifyListeners();
+  }
 }

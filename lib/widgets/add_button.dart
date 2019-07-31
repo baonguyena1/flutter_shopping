@@ -17,9 +17,9 @@ class AddButton extends StatelessWidget {
       ),
       child: FlatButton(
         splashColor: Theme.of(context).primaryColor,
-        onPressed: cart.items.contains(item) ? null : () => cart.add(item),
+        onPressed: cart.items.contains(item) ? () => cart.remove(item) : () => cart.add(item),
         child: cart.items.contains(item)
-            ? Icon(Icons.check_circle)
+            ? Icon(Icons.remove)
             : Icon(Icons.add),
       ),
     );

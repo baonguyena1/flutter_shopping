@@ -17,7 +17,7 @@ class CatalogItem extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: LimitedBox(
-        maxHeight: 48,
+        maxHeight: 60,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           decoration: BoxDecoration(
@@ -38,8 +38,13 @@ class CatalogItem extends StatelessWidget {
                 width: 10,
               ),
               Expanded(
-                child:
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
                     Text(item.name, style: Theme.of(context).textTheme.title),
+                    Text('Price: ${item.price}', style: Theme.of(context).textTheme.subtitle),
+                  ],
+                )
               ),
               SizedBox(
                 width: 10,
